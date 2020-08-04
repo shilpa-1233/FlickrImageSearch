@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJU-kv-WiZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Search Controller-->
+        <scene sceneID="tpj-0m-bpd">
+            <objects>
+                <viewController storyboardIdentifier="ImageSearchControllerID" id="XJU-kv-WiZ" customClass="ImageSearchController" customModule="DunzoImageSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWo-Qe-qYU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-nf-Dnf">
+                                <rect key="frame" x="20" y="44" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2VM-yb-mE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XJU-kv-WiZ" id="q9b-0c-cqM"/>
+                                </connections>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-0J-W6e">
+                                <rect key="frame" x="20" y="102" width="374" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ODS-uR-NMK">
+                                    <size key="itemSize" width="173" height="206"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="eRj-gS-9Dd" customClass="ImageCell" customModule="DunzoImageSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="206"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gtl-rK-4Lc">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="206"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTt-ke-of2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="173" height="206"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="bJ5-IT-cVC"/>
+                                                        <constraint firstAttribute="width" constant="100" id="qSq-kw-MXn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-aZ-kiP">
+                                                    <rect key="frame" x="68" y="84.5" width="37" height="37"/>
+                                                    <color key="color" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="NIG-aZ-kiP" firstAttribute="centerX" secondItem="Gtl-rK-4Lc" secondAttribute="centerX" id="37r-Vh-doW"/>
+                                                <constraint firstAttribute="bottom" secondItem="PTt-ke-of2" secondAttribute="bottom" id="9XP-ff-zH9"/>
+                                                <constraint firstAttribute="trailing" secondItem="PTt-ke-of2" secondAttribute="trailing" id="AOr-cS-1Yl"/>
+                                                <constraint firstItem="PTt-ke-of2" firstAttribute="top" secondItem="Gtl-rK-4Lc" secondAttribute="top" id="cL2-24-YWq"/>
+                                                <constraint firstItem="PTt-ke-of2" firstAttribute="leading" secondItem="Gtl-rK-4Lc" secondAttribute="leading" id="gru-uQ-pPD"/>
+                                                <constraint firstItem="NIG-aZ-kiP" firstAttribute="centerY" secondItem="Gtl-rK-4Lc" secondAttribute="centerY" id="nR8-Za-cKU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="173" height="206"/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="NIG-aZ-kiP" id="7KF-42-Mmo"/>
+                                            <outlet property="imageView" destination="PTt-ke-of2" id="iko-ka-5c3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XJU-kv-WiZ" id="N9n-92-oXo"/>
+                                    <outlet property="delegate" destination="XJU-kv-WiZ" id="hxM-tB-DGN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yjz-nf-Dnf" firstAttribute="top" secondItem="htJ-Cn-dP1" secondAttribute="top" id="4BQ-qa-jMD"/>
+                            <constraint firstItem="htJ-Cn-dP1" firstAttribute="trailing" secondItem="cBb-0J-W6e" secondAttribute="trailing" constant="20" id="M7M-Oj-Frh"/>
+                            <constraint firstItem="yjz-nf-Dnf" firstAttribute="leading" secondItem="htJ-Cn-dP1" secondAttribute="leading" constant="20" id="NtQ-NG-84G"/>
+                            <constraint firstItem="htJ-Cn-dP1" firstAttribute="trailing" secondItem="yjz-nf-Dnf" secondAttribute="trailing" constant="20" id="V3E-cb-cAH"/>
+                            <constraint firstItem="cBb-0J-W6e" firstAttribute="top" secondItem="yjz-nf-Dnf" secondAttribute="bottom" constant="8" id="i27-dY-Ibt"/>
+                            <constraint firstItem="cBb-0J-W6e" firstAttribute="leading" secondItem="htJ-Cn-dP1" secondAttribute="leading" constant="20" id="njt-dj-kEL"/>
+                            <constraint firstItem="htJ-Cn-dP1" firstAttribute="bottom" secondItem="cBb-0J-W6e" secondAttribute="bottom" constant="23" id="x4a-u3-FRj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="htJ-Cn-dP1"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cBb-0J-W6e" id="1pc-Dk-4mm"/>
+                        <outlet property="searchField" destination="yjz-nf-Dnf" id="l4M-E9-lqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHk-Mk-mve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302.89855072463769" y="354.91071428571428"/>
+        </scene>
+    </scenes>
+</document>

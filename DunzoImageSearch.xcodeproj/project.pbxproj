@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F7E51EAD24D5579A0000FB2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EAC24D5579A0000FB2E /* AppDelegate.swift */; };
-		F7E51EAF24D5579A0000FB2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EAE24D5579A0000FB2E /* SceneDelegate.swift */; };
-		F7E51EB124D5579A0000FB2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EB024D5579A0000FB2E /* ViewController.swift */; };
+		F7E51EB124D5579A0000FB2E /* ImageSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EB024D5579A0000FB2E /* ImageSearchController.swift */; };
 		F7E51EB424D5579A0000FB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E51EB224D5579A0000FB2E /* Main.storyboard */; };
 		F7E51EB624D5579F0000FB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E51EB524D5579F0000FB2E /* Assets.xcassets */; };
-		F7E51EB924D5579F0000FB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E51EB724D5579F0000FB2E /* LaunchScreen.storyboard */; };
+		F7E51EC124D5586C0000FB2E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EC024D5586C0000FB2E /* ImageCell.swift */; };
+		F7E51EC324D5587E0000FB2E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EC224D5587E0000FB2E /* Model.swift */; };
+		F7E51EC524D558860000FB2E /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EC424D558860000FB2E /* ImageSearcher.swift */; };
+		F7E51EC724D578460000FB2E /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E51EC624D578450000FB2E /* ImageProvider.swift */; };
+		F7E51EC924D5CAAE0000FB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E51EC824D5CAAE0000FB2E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7E51EA924D5579A0000FB2E /* DunzoImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DunzoImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E51EAC24D5579A0000FB2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7E51EAE24D5579A0000FB2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7E51EB024D5579A0000FB2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7E51EB024D5579A0000FB2E /* ImageSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchController.swift; sourceTree = "<group>"; };
 		F7E51EB324D5579A0000FB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7E51EB524D5579F0000FB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7E51EB824D5579F0000FB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7E51EBA24D5579F0000FB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E51EC024D5586C0000FB2E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F7E51EC224D5587E0000FB2E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F7E51EC424D558860000FB2E /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
+		F7E51EC624D578450000FB2E /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		F7E51EC824D5CAAE0000FB2E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		F7E51EAB24D5579A0000FB2E /* DunzoImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				F7E51ED024D5D3770000FB2E /* Controller */,
+				F7E51ECC24D5D17A0000FB2E /* Network */,
+				F7E51ECB24D5D16A0000FB2E /* Model */,
+				F7E51ECA24D5D1530000FB2E /* View */,
 				F7E51EAC24D5579A0000FB2E /* AppDelegate.swift */,
-				F7E51EAE24D5579A0000FB2E /* SceneDelegate.swift */,
-				F7E51EB024D5579A0000FB2E /* ViewController.swift */,
-				F7E51EB224D5579A0000FB2E /* Main.storyboard */,
 				F7E51EB524D5579F0000FB2E /* Assets.xcassets */,
-				F7E51EB724D5579F0000FB2E /* LaunchScreen.storyboard */,
 				F7E51EBA24D5579F0000FB2E /* Info.plist */,
 			);
 			path = DunzoImageSearch;
+			sourceTree = "<group>";
+		};
+		F7E51ECA24D5D1530000FB2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7E51EC824D5CAAE0000FB2E /* LaunchScreen.storyboard */,
+				F7E51EB224D5579A0000FB2E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7E51ECB24D5D16A0000FB2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7E51EC224D5587E0000FB2E /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7E51ECC24D5D17A0000FB2E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F7E51EC624D578450000FB2E /* ImageProvider.swift */,
+				F7E51EC424D558860000FB2E /* ImageSearcher.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F7E51ED024D5D3770000FB2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7E51EB024D5579A0000FB2E /* ImageSearchController.swift */,
+				F7E51EC024D5586C0000FB2E /* ImageCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +166,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E51EB924D5579F0000FB2E /* LaunchScreen.storyboard in Resources */,
 				F7E51EB624D5579F0000FB2E /* Assets.xcassets in Resources */,
 				F7E51EB424D5579A0000FB2E /* Main.storyboard in Resources */,
+				F7E51EC924D5CAAE0000FB2E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E51EB124D5579A0000FB2E /* ViewController.swift in Sources */,
+				F7E51EC324D5587E0000FB2E /* Model.swift in Sources */,
+				F7E51EB124D5579A0000FB2E /* ImageSearchController.swift in Sources */,
+				F7E51EC724D578460000FB2E /* ImageProvider.swift in Sources */,
+				F7E51EC524D558860000FB2E /* ImageSearcher.swift in Sources */,
 				F7E51EAD24D5579A0000FB2E /* AppDelegate.swift in Sources */,
-				F7E51EAF24D5579A0000FB2E /* SceneDelegate.swift in Sources */,
+				F7E51EC124D5586C0000FB2E /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +197,6 @@
 				F7E51EB324D5579A0000FB2E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F7E51EB724D5579F0000FB2E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7E51EB824D5579F0000FB2E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
